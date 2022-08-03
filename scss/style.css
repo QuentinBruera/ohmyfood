@@ -1,9 +1,195 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-.icon {
-  width: 40px;
-}
-
 .card__img {
   width: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  margin: 45px auto 10px auto;
+  width: 90%;
+}
+
+.h2-restaurants {
+  margin: 55px auto 22px auto;
+}
+
+.icon {
+  width: 12px;
   height: auto;
+}
+
+.header {
+  display: flex;
+}
+.header__logo {
+  width: 165px;
+  margin: 20px auto 12px auto;
+}
+
+.footer__logo {
+  width: 160px;
+}
+
+.contener {
+  display: flex;
+  flex-direction: column;
+}
+.contener-functioning {
+  margin-bottom: 48px;
+}
+.contener-restaurants {
+  background-color: #F6F6F6;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  background-color: #EAEAEA;
+}
+.location__icon {
+  margin-right: 12px;
+  position: absolute;
+  left: -28px;
+}
+.location__text {
+  position: relative;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.title {
+  background-color: #F6F6F6;
+}
+.title__h1 {
+  width: 65%;
+  margin: auto;
+  padding-top: 40px;
+  text-align: center;
+  font-size: 24px;
+}
+.title__text {
+  margin: auto;
+  text-align: center;
+  padding-top: 13px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.title__btn {
+  display: block;
+  padding: 46px 0 75px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.title__btn__span {
+  background-color: #9356DC;
+  padding: 15px 21px 15px 21px;
+  border-radius: 30px;
+  color: white;
+}
+
+.tutorial-contener {
+  width: 85%;
+  margin: auto;
+  max-width: 1250px;
+}
+
+.tutorial-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 35px 0px 22px 0px;
+  border-radius: 25px;
+  background-color: #F6F6F6;
+  margin: 16px auto 22px auto;
+  font-weight: 500;
+}
+.tutorial-btn__number {
+  position: absolute;
+  padding: 5px 8px 3px 8px;
+  border-radius: 50px;
+  background-color: #9356DC;
+  color: white;
+  left: -8px;
+  top: 33px;
+  font-size: 13px;
+}
+.tutorial-btn__icon {
+  position: absolute;
+  left: 36px;
+  top: 30px;
+}
+.tutorial-btn__text {
+  padding: 30px;
+  border-radius: 25px;
+  background-color: #F6F6F6;
+}
+
+#icon-phone {
+  width: 15px;
+}
+
+#icon-menu {
+  width: 17px;
+  top: 33px;
+}
+
+#icon-market {
+  width: 20px;
+  top: 33px;
+}
+
+.card {
+  position: relative;
+  width: 90%;
+  margin: auto auto 20px auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 17px -4px #000000;
+}
+.card__new {
+  position: absolute;
+  right: 14px;
+  top: 13px;
+  padding: 7px 14px 5px 13px;
+  background-color: #99E2D0;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.card__new p {
+  margin: 0;
+}
+.card__img {
+  width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.card__body {
+  display: flex;
+  justify-content: space-between;
+}
+.card__body__text {
+  margin: 0 0 0 14px;
+}
+.card__body__text h3 {
+  margin: 11px 0 0 0;
+  font-size: 18px;
+}
+.card__body__text p {
+  margin: 6px 0 14px 0;
+  font-size: 17px;
+  font-weight: 300;
+}
+.card__body__heart {
+  display: flex;
+  width: 20px;
 }/*# sourceMappingURL=style.css.map */
