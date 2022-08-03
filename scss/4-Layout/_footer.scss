@@ -1,5 +1,26 @@
+// .footer {
+//     &__logo {
+//         width: 160px;
+//     }
+// }
 .footer {
+    padding: 0 0 26px 25px;
     &__logo {
-        width: 160px;
+        color: #EAEAEA;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        & li {
+            padding-bottom: 8px;
+        }
+        &__icon {
+            width: 12px;
+            fill: #EAEAEA;
+            padding-right: 10px;
+        }
+        &__text {
+            color: #EAEAEA;
+        }
     }
 }

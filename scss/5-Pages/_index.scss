@@ -7,6 +7,12 @@
     &-restaurants {
         background-color: $color-background-secondary;
     }
+    &-card {
+        margin-bottom: 45px;
+    }
+    &-footer {
+        background-color: $color-background-footer;
+    }
 }
 
 .location {
@@ -106,10 +112,6 @@
     width: 20px;
     top: 33px
 }
-
-.contener__card {
-
-}
 .card {
     position: relative;
     width: 90%;
@@ -152,6 +154,21 @@
         &__heart {
             display: flex;
             width: 20px;
+        }
+    }
+}
+
+.footer {
+    &__logo {
+        color: #EAEAEA;
+    }
+    &__list {
+        margin: 0;
+        &__icon {
+            fill: #EAEAEA;
+        }
+        &__text {
+            color: #EAEAEA;
         }
     }
 }

@@ -8,6 +8,10 @@ a {
   color: black;
 }
 
+ul {
+  list-style-type: none;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -19,6 +23,15 @@ h2 {
 
 .h2-restaurants {
   margin: 55px auto 22px auto;
+}
+
+h4 {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 100;
+  margin: 0;
+  padding-top: 23px;
+  padding-bottom: 20px;
 }
 
 .icon {
@@ -34,8 +47,26 @@ h2 {
   margin: 20px auto 12px auto;
 }
 
+.footer {
+  padding: 0 0 26px 25px;
+}
 .footer__logo {
-  width: 160px;
+  color: #EAEAEA;
+}
+.footer__list {
+  margin: 0;
+  padding: 0;
+}
+.footer__list li {
+  padding-bottom: 8px;
+}
+.footer__list__icon {
+  width: 12px;
+  fill: #EAEAEA;
+  padding-right: 10px;
+}
+.footer__list__text {
+  color: #EAEAEA;
 }
 
 .contener {
@@ -47,6 +78,12 @@ h2 {
 }
 .contener-restaurants {
   background-color: #F6F6F6;
+}
+.contener-card {
+  margin-bottom: 45px;
+}
+.contener-footer {
+  background-color: #353535;
 }
 
 .location {
@@ -192,4 +229,17 @@ h2 {
 .card__body__heart {
   display: flex;
   width: 20px;
+}
+
+.footer__logo {
+  color: #EAEAEA;
+}
+.footer__list {
+  margin: 0;
+}
+.footer__list__icon {
+  fill: #EAEAEA;
+}
+.footer__list__text {
+  color: #EAEAEA;
 }/*# sourceMappingURL=style.css.map */
