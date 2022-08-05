@@ -231,15 +231,70 @@ h4 {
   width: 20px;
 }
 
-.footer__logo {
-  color: #EAEAEA;
+.choise {
+  display: flex;
+  margin: auto;
+  width: 350px;
+  overflow: hidden;
+  background-color: beige;
+  border-radius: 15px;
 }
-.footer__list {
+.choise__div1 {
+  display: flex;
+}
+.choise__div2 {
+  display: flex;
+}
+.choise__title {
   margin: 0;
+  padding-bottom: 5px;
+  padding: 13px 0 4px 10px;
 }
-.footer__list__icon {
-  fill: #EAEAEA;
+.choise__text {
+  margin: 0;
+  width: 295px;
+  font-size: 15px;
+  padding: 0 0 12px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.footer__list__text {
-  color: #EAEAEA;
+.choise:hover .choise__text {
+  width: 220px;
+  text-overflow: ellipsis;
+  transition: 1s;
+}
+.choise__price {
+  margin: 0;
+  width: 45px;
+}
+.choise__valid {
+  margin: 0;
+  width: 60px;
+  height: 100%;
+  background-color: red;
+}
+.choise:hover .choise__move {
+  -webkit-animation: valid 1s;
+          animation: valid 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes valid {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+
+@keyframes valid {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
 }/*# sourceMappingURL=style.css.map */

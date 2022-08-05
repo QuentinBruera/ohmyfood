@@ -1,0 +1,63 @@
+// * {
+//     border: solid 1px black;
+// }
+
+.choise {
+    display: flex;
+    margin: auto;
+    width: 350px;
+    overflow: hidden;
+    background-color: beige;
+    border-radius: 15px;
+    &__div1 {
+        display: flex;
+    }
+    &__div2 {
+        display: flex;
+    }
+    &__title {
+        margin: 0;
+        padding-bottom: 5px;
+        padding: 13px 0 4px 10px;
+    }
+    &__text {
+        margin: 0;
+        width: 295px;
+        font-size: 15px;
+        padding: 0 0 12px 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &:hover .choise__text {
+        width: 220px;
+        text-overflow: ellipsis;
+        transition: 1s;
+    }
+    &__price {
+        margin: 0;
+        width: 45px;
+
+    }
+    &__valid {
+        margin: 0;
+        width: 60px;
+        height: 100%;
+        background-color: red;
+    }
+    &__move {
+        // transform: translateX(60px);
+    }
+    &:hover .choise__move {
+        animation: valid 1s;
+        animation-fill-mode: both;
+    }
+}
+@keyframes valid {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(15px);
+    }
+}
