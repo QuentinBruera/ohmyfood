@@ -40,12 +40,20 @@
             font-family: 'Shrikhand', cursive;
         }
     }
-    &__title h2 {
+    &__title h2{
         width: 350px;
         font-size: 16px;
         font-weight: 300;
         margin: 37px auto 20px auto;
         padding-left: 7px;
+        &::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: $color-tertiary;
+            margin-top: 3px;
+        }
     }
     &__btn {
         padding: 38px 0 75px 0;

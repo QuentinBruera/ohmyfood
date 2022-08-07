@@ -276,6 +276,14 @@ h4 {
   margin: 37px auto 20px auto;
   padding-left: 7px;
 }
+.menu__title h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin-top: 3px;
+}
 .menu__btn {
   padding: 38px 0 75px 0;
 }
