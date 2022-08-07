@@ -1,6 +1,11 @@
 // * {
 //     border: solid 1px black;
 // }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .card__img {
     width: 200px;
 }

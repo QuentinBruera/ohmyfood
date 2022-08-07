@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .card__img {
   width: 200px;
 }
@@ -231,6 +237,27 @@ h4 {
   width: 20px;
 }
 
+.heart {
+  width: 50px;
+  transform: translateX(54px);
+}
+
+.heart--anim {
+  width: 50px;
+  transform-origin: bottom;
+  transform: scale(0);
+  fill: url(#grad3);
+}
+.heart--anim:hover {
+  transform: scale(1);
+  transition: transform 2s;
+}
+
+.heart:hover + .heart--anim {
+  transform: scale(1);
+  transition: transform 2s;
+}
+
 .choise {
   display: flex;
   margin: auto;
@@ -239,20 +266,23 @@ h4 {
   background-color: beige;
   border-radius: 15px;
 }
-.choise__div1 {
-  display: flex;
-}
-.choise__div2 {
+.choise__contener-text-price {
   display: flex;
 }
 .choise__title {
   margin: 0;
-  padding-bottom: 5px;
   padding: 13px 0 4px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.choise:hover .choise__title {
+  width: 220px;
+  transition: 1s;
 }
 .choise__text {
   margin: 0;
-  width: 295px;
+  width: 305px;
   font-size: 15px;
   padding: 0 0 12px 10px;
   white-space: nowrap;
@@ -260,8 +290,7 @@ h4 {
   text-overflow: ellipsis;
 }
 .choise:hover .choise__text {
-  width: 220px;
-  text-overflow: ellipsis;
+  width: 230px;
   transition: 1s;
 }
 .choise__price {
@@ -269,10 +298,16 @@ h4 {
   width: 45px;
 }
 .choise__valid {
+  display: flex;
   margin: 0;
   width: 60px;
   height: 100%;
-  background-color: red;
+  fill: white;
+  background-color: #99E2D0;
+}
+.choise:hover .choise__valid {
+  transform: rotate(180deg);
+  transition: transform 3s;
 }
 .choise:hover .choise__move {
   -webkit-animation: valid 1s;
@@ -280,10 +315,16 @@ h4 {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
+.choise:hover .card-icon {
+  width: 30px;
+  margin: auto;
+  transform: rotate(1turn);
+  transition: transform 1s;
+}
 
 @-webkit-keyframes valid {
   0% {
-    transform: translateX(100px);
+    transform: translateX(0px);
   }
   100% {
     transform: translateX(15px);
@@ -292,7 +333,7 @@ h4 {
 
 @keyframes valid {
   0% {
-    transform: translateX(100px);
+    transform: translateX(0px);
   }
   100% {
     transform: translateX(15px);
