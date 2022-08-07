@@ -55,7 +55,7 @@
         font-size: 16px;
         font-weight: 500;
         &__span {
-            background-color: $color-primary;
+            background-image: linear-gradient(to top left, $color-primary, $color-secondary);
             padding: 15px 21px 15px 21px;
             border-radius: 30px;
             color: white;

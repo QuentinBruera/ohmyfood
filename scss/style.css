@@ -133,7 +133,7 @@ h4 {
   font-weight: 500;
 }
 .title__btn__span {
-  background-color: #9356DC;
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   padding: 15px 21px 15px 21px;
   border-radius: 30px;
   color: white;
@@ -237,14 +237,78 @@ h4 {
   width: 20px;
 }
 
+.restaurant-image img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contener-menu {
+  margin: auto;
+  border-radius: 40px 40px 0 0;
+  background-color: #F6F6F6;
+  margin-top: -35px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu-title {
+  display: flex;
+  width: 350px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 25px 0 8px;
+  margin: auto;
+}
+.menu-title h1 {
+  font-size: 28px;
+  font-family: "Shrikhand", cursive;
+}
+.menu__title h2 {
+  width: 350px;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 37px auto 20px auto;
+  padding-left: 7px;
+}
+.menu__btn {
+  padding: 38px 0 75px 0;
+}
+.menu__btn__span {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 50px;
+  background-color: red;
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+  padding: 0 20px 0 20px;
+}
+
+.btn {
+  width: 300px;
+  margin: auto;
+}
+
+.menu-heart {
+  position: relative;
+}
+
 .heart {
-  width: 50px;
-  transform: translateX(54px);
+  width: 25px;
 }
 
 .heart--anim {
-  width: 50px;
+  width: 25px;
+  left: 0;
   transform-origin: bottom;
+  position: absolute;
   transform: scale(0);
   fill: url(#grad3);
 }
@@ -258,29 +322,30 @@ h4 {
   transition: transform 2s;
 }
 
-.choise {
+.choice {
   display: flex;
-  margin: auto;
+  margin: auto auto 14px auto;
   width: 350px;
   overflow: hidden;
-  background-color: beige;
+  background-color: white;
   border-radius: 15px;
 }
-.choise__contener-text-price {
+.choice__contener-text-price {
   display: flex;
 }
-.choise__title {
+.choice__title {
   margin: 0;
-  padding: 13px 0 4px 10px;
+  padding: 13px 0 6px 10px;
+  font-size: 18px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.choise:hover .choise__title {
-  width: 220px;
+.choice:hover .choice__title {
+  width: 275px;
   transition: 1s;
 }
-.choise__text {
+.choice__text {
   margin: 0;
   width: 305px;
   font-size: 15px;
@@ -289,15 +354,15 @@ h4 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.choise:hover .choise__text {
+.choice:hover .choice__text {
   width: 230px;
   transition: 1s;
 }
-.choise__price {
+.choice__price {
   margin: 0;
   width: 45px;
 }
-.choise__valid {
+.choice__valid {
   display: flex;
   margin: 0;
   width: 60px;
@@ -305,17 +370,17 @@ h4 {
   fill: white;
   background-color: #99E2D0;
 }
-.choise:hover .choise__valid {
+.choice:hover .choice__valid {
   transform: rotate(180deg);
   transition: transform 3s;
 }
-.choise:hover .choise__move {
+.choice:hover .choice__move {
   -webkit-animation: valid 1s;
           animation: valid 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.choise:hover .card-icon {
+.choice:hover .card-icon {
   width: 30px;
   margin: auto;
   transform: rotate(1turn);

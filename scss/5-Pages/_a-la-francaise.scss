@@ -1,22 +1,114 @@
 // * {
 //     border: solid 1px black;
 // }
-  .heart {
-    width: 50px;
-    transform: translateX(54px);
-  }
-  .heart--anim {
-    width: 50px;
+// body {
+//     display: flex;
+//     flex-direction: column;
+// }
+// Section 1
+.restaurant-image img{
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+// Section 2 
+// contener-menu
+.contener-menu {
+    // width: 80%;
+    margin: auto;
+    border-radius: 40px 40px 0 0;
+    background-color: #F6F6F6;
+    margin-top: -35px;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    &-title {
+        display: flex;
+        width: 350px;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 35px 38px 0 20px;
+        padding: 35px 25px 0 8px;
+        margin: auto;
+        & h1 {
+            font-size: 28px ;
+            font-family: 'Shrikhand', cursive;
+        }
+    }
+    &__title h2 {
+        width: 350px;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 37px auto 20px auto;
+        padding-left: 7px;
+    }
+    &__btn {
+        padding: 38px 0 75px 0;
+        &__span {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            width: 190px;
+            height: 50px;
+            background-color: red;
+            background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+            padding: 0 20px 0 20px;
+        }
+    }
+}
+.btn {
+    width: 300px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-heart {
+    position: relative;
+}
+.heart {
+    width: 25px;
+}
+.heart--anim {
+    width: 25px;
+    left: 0;
     transform-origin: bottom;
+    position: absolute;
     transform: scale(0);
     fill: url(#grad3);
     &:hover {
         transform: scale(1);
         transition: transform 2s;
-        // color: blue;    
     }
-  }
-  .heart:hover + .heart--anim {
+}
+.heart:hover + .heart--anim {
     transform: scale(1);
     transition: transform 2s;
   }
@@ -43,26 +135,26 @@
 
 
 
-
-.choise {
+.choice {
     display: flex;
-    margin: auto;
+    margin: auto auto 14px auto;
     width: 350px;
     overflow: hidden;
-    background-color: beige;
+    background-color: white;
     border-radius: 15px;
     &__contener-text-price {
         display: flex;
     }
     &__title {
         margin: 0;
-        padding: 13px 0 4px 10px;
+        padding: 13px 0 6px 10px;
+        font-size: 18px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    &:hover .choise__title {
-        width: 220px;
+    &:hover .choice__title {
+        width: 275px;
         transition: 1s;
     }
     &__text {
@@ -74,7 +166,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    &:hover .choise__text {
+    &:hover .choice__text {
         width: 230px;
         transition: 1s;
     }
@@ -90,11 +182,11 @@
         fill: white;
         background-color: $color-tertiary;
     }
-    &:hover .choise__valid {
+    &:hover .choice__valid {
         transform: rotate(180deg);
         transition: transform 3s;
     }
-    &:hover .choise__move {
+    &:hover .choice__move {
         animation: valid 1s;
         animation-fill-mode: both;
     }
