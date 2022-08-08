@@ -75,6 +75,107 @@ h4 {
   color: #EAEAEA;
 }
 
+.loader {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  -webkit-animation: loader 3s forwards steps(1);
+          animation: loader 3s forwards steps(1);
+}
+.loader__spinner {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+  opacity: 0.9;
+}
+.loader__spinner::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border-radius: 50px;
+  border: 4px solid #FF79DA;
+  opacity: 0.5;
+}
+.loader__spinner::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 50px;
+  border: 5px solid transparent;
+  border-right-color: #99E2D0;
+  border-left-color: #99E2D0;
+  -webkit-animation: spinreverse 2s linear infinite;
+          animation: spinreverse 2s linear infinite;
+  opacity: 1;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinreverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes spinreverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 .contener {
   display: flex;
   flex-direction: column;
@@ -249,7 +350,7 @@ h4 {
   margin: auto;
   border-radius: 40px 40px 0 0;
   background-color: #F6F6F6;
-  margin-top: -35px;
+  margin-top: -36px;
   position: relative;
 }
 
@@ -273,7 +374,7 @@ h4 {
   width: 350px;
   font-size: 16px;
   font-weight: 300;
-  margin: 37px auto 20px auto;
+  margin: 37px auto 16px auto;
   padding-left: 7px;
 }
 .menu__title h2::after {
