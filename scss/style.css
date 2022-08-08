@@ -439,6 +439,25 @@ h4 {
   background-color: white;
   border-radius: 15px;
 }
+.choice-1 {
+  opacity: 0;
+  -webkit-animation: choice-number 1s both;
+          animation: choice-number 1s both;
+}
+.choice-2 {
+  opacity: 0;
+  -webkit-animation: choice-number 1s both;
+          animation: choice-number 1s both;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.choice-3 {
+  opacity: 0;
+  -webkit-animation: choice-number 1s both;
+          animation: choice-number 1s both;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
 .choice__contener-text-price {
   display: flex;
 }
@@ -496,6 +515,33 @@ h4 {
   transition: transform 1s;
 }
 
+@-webkit-keyframes choice-number {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes choice-number {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @-webkit-keyframes valid {
   0% {
     transform: translateX(0px);
@@ -504,7 +550,6 @@ h4 {
     transform: translateX(15px);
   }
 }
-
 @keyframes valid {
   0% {
     transform: translateX(0px);
