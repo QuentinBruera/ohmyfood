@@ -199,7 +199,7 @@
             box-shadow: 0px 10px 13px -7px #000000, 0px 0px 28px -1px lighten($color-primary, 20);
             opacity: 0;
             z-index: -1;
-            transform: opacity 250ms;
+            transition: opacity 250ms;
         }
         &__number {
             position: absolute;
