@@ -57,7 +57,7 @@
     }
     &__btn {
         padding: 38px 0 75px 0;
-        &__span {
+        &__a {
             display: flex;
             margin: auto;
             justify-content: center;
@@ -72,7 +72,7 @@
 }
 .btn {
     width: 300px;
-    margin: auto;
+    margin: auto;    
 }
 
 
@@ -103,6 +103,7 @@
 }
 .heart {
     width: 25px;
+    transform-origin: top;
 }
 .heart--anim {
     width: 25px;
@@ -111,15 +112,17 @@
     position: absolute;
     transform: scale(0);
     fill: url(#grad3);
+    cursor: pointer;
     &:hover {
-        transform: scale(1);
-        transition: transform 2s;
+        transform: scale(1.01);
+        transition: transform .4s;
     }
 }
 .heart:hover + .heart--anim {
-    transform: scale(1);
-    transition: transform 2s;
+    transform: scale(1.01);
+    transition: transform .4s;
   }
+
 
 
 
@@ -222,7 +225,7 @@
 @keyframes choice-number {
     0% {
         opacity: 0;
-        transform: translateY(5px);
+        transform: translateY(10px);
     }
     25% {
         opacity: 0;
