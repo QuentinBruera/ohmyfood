@@ -13,12 +13,17 @@ h1 {
 h2 {
     margin: 45px auto 25px auto;
     width: 90%;
+}
+.h2-tutorial {
     @media all and (min-width: 992px){
         text-align: center;
     }
 }
 .h2-restaurants {
     margin: 55px auto 22px auto;
+    @media all and (min-width: 992px){
+        text-align: center;
+    }
 }
 h4 {
     font-family: 'Shrikhand', cursive;

@@ -26,14 +26,20 @@ h2 {
   margin: 45px auto 25px auto;
   width: 90%;
 }
+
 @media all and (min-width: 992px) {
-  h2 {
+  .h2-tutorial {
     text-align: center;
   }
 }
 
 .h2-restaurants {
   margin: 55px auto 22px auto;
+}
+@media all and (min-width: 992px) {
+  .h2-restaurants {
+    text-align: center;
+  }
 }
 
 h4 {
@@ -45,8 +51,17 @@ h4 {
   padding-bottom: 20px;
 }
 
+.arrow {
+  position: absolute;
+  width: 18px;
+  top: 25px;
+  left: 23px;
+  fill-opacity: 0.7;
+}
+
 .header {
   display: flex;
+  position: relative;
 }
 .header__logo {
   width: 165px;
@@ -121,6 +136,58 @@ h4 {
 }
 .footer__list__text {
   color: #EAEAEA;
+}
+
+.loader {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  -webkit-animation: loader 3s both steps(1);
+          animation: loader 3s both steps(1);
+}
+.loader__spinner {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+  opacity: 0.9;
+}
+.loader__spinner::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border-radius: 50px;
+  border: 4px solid #FF79DA;
+  opacity: 0.5;
+}
+.loader__spinner::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 50px;
+  border: 5px solid transparent;
+  border-right-color: #99E2D0;
+  border-left-color: #99E2D0;
+  -webkit-animation: spinreverse 2s linear infinite;
+          animation: spinreverse 2s linear infinite;
+  opacity: 1;
 }
 
 @-webkit-keyframes loader {
@@ -419,6 +486,12 @@ h4 {
   margin-top: -36px;
   position: relative;
 }
+@media all and (min-width: 1100px) {
+  .contener-menu__bis {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 
 .menu {
   display: flex;
@@ -478,6 +551,7 @@ h4 {
 .heart {
   width: 25px;
   transform-origin: top;
+  cursor: pointer;
 }
 
 .heart--anim {
@@ -499,13 +573,20 @@ h4 {
   transition: transform 0.4s;
 }
 
+.menu__choice {
+  position: relative;
+}
+
 .choice {
   display: flex;
+  position: relative;
   margin: auto auto 14px auto;
   width: 350px;
   overflow: hidden;
   background-color: white;
   border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0px 0px 17px -4px #000000;
 }
 .choice-1 {
   opacity: 0;
@@ -527,9 +608,11 @@ h4 {
           animation-delay: 0.6s;
 }
 .choice__contener-text-price {
+  position: relative;
   display: flex;
 }
 .choice__title {
+  position: relative;
   margin: 0;
   padding: 13px 0 6px 10px;
   font-size: 18px;
@@ -542,6 +625,7 @@ h4 {
   transition: 1s;
 }
 .choice__text {
+  position: relative;
   margin: 0;
   width: 305px;
   font-size: 15px;
@@ -559,6 +643,7 @@ h4 {
   width: 45px;
 }
 .choice__valid {
+  position: relative;
   display: flex;
   margin: 0;
   width: 60px;
