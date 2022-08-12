@@ -1,9 +1,5 @@
 @use "../1-Utils/variables" as v;
-// .footer {
-//     &__logo {
-//         width: 160px;
-//     }
-// }
+
 .footer {
     padding: 0 0 26px 25px;
     display: flex;
@@ -20,7 +16,7 @@
         justify-content: space-around;
     }
     &__logo {
-        color: v.$color-background-location;
+        color: $color-background-one;
     }
     &__list {
         margin: 0;
@@ -41,9 +37,9 @@
         }
         & li a{
             padding-bottom: 8px;
-            color: white;
+            color: $color-wite;
             &:hover {
-                text-decoration: underline white;
+                text-decoration: underline $color-wite;
             }
             @media all and (min-width: 768px) {
                 padding: 0;
@@ -54,11 +50,11 @@
         }
         &__icon {
             width: 23px;
-            fill: #EAEAEA;
+            fill: $color-background-one;
             padding-right: 10px;
         }
         &__text {
-            color: #EAEAEA;
+            color: $color-background-one;
         }
     }
 }

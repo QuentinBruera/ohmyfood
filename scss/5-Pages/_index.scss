@@ -1,3 +1,6 @@
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
+// \\\\\\\\\\   Loader   ////////// \\
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
 .loader {
     position: fixed;
     display: flex;
@@ -5,14 +8,14 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($color: #000000, $alpha: 0.8);
+    background: rgba($color: $color-black, $alpha: 0.8);
     z-index: 999;
     animation: loader 3s both steps(1);
     &__spinner {
         position: relative;
+        margin: auto;
         width: 50px;
         height: 50px;
-        margin: auto;
         border-radius: 50px;
         border: 6px solid transparent;
         border-top-color: $color-primary;
@@ -70,52 +73,23 @@
     }
     100% {
         transform: rotate(-360deg);
-    }
-    
+    } 
 }
-
-
-
-
-.contener {
-    display: flex;
-    flex-direction: column;
-    &-functioning {
-        margin-bottom: 65px;
-    }
-    &-restaurants {
-        background-color: $color-background-secondary;
-
-    }
-    &-card {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        margin-bottom: 45px;
-        @media all and (min-width: 992px) {
-            width: 80%;
-            margin: auto;
-            justify-content: center;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-        }
-    }
-    &-footer {
-        background-color: $color-background-footer;
-    }
-}
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
+// \\\\\\\\\\  Location  ////////// \\
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
 .location {
     display: flex;
     justify-content: center;
     padding: 15px 0 15px 0;
-    box-shadow: 0px 0px 10px -2px lighten(black, 20);
-    background-color: $color-background-location;
+    box-shadow: 0px 0px 10px -2px lighten($color-black, 20);
+    background-color: $color-background-one;
 
     &__icon {
-        width: 12px;
-        margin-right: 12px;
         position: absolute;
+        margin-right: 12px;
         left: -28px;
+        width: 12px;
     }
     &__text {
         position: relative;
@@ -123,8 +97,11 @@
         opacity: 0.8;
     }
 }
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
+// \\\\\\\\\\   Title    ////////// \\
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
 .title {
-    background-color: $color-background-secondary;
+    background-color: $color-background-two;
     &__h1 {
         width: 65%;
         margin: auto;
@@ -133,8 +110,8 @@
         font-size: 24px;
     }
     &__text {
-        margin: auto;
         text-align: center;
+        margin: auto;
         padding-top: 13px;
         font-size: 18px;
         font-weight: 300;
@@ -142,44 +119,44 @@
     &__btn {
         padding: 46px 0 75px 0;
         text-align: center;
-        font-size: 16px;
         font-weight: 500;
         &__a {
-            background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+            @include gradient-btn;
             padding: 15px 21px 15px 21px;
-            border-radius: 30px;
-            color: white;
-            box-shadow: 3px 3px 28px 3px rgba(0, 0, 0, 0.30);
             &:hover {
                 opacity: 0.8;
             }
         }
     }
 }
-.tutorial-contener {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 85%;
-    margin: auto;
-    gap: 20px;
-    @media all and (min-width: 992px) {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 20px;
-        width: 90%;
-        margin: auto;
-    }
-}
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
+// \\\\\\\\\\  Tutorial  ////////// \\
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
 .tutorial {
+    &-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 85%;
+        margin: auto;
+        gap: 20px;
+        @media all and (min-width: 992px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 20px;
+            width: 90%;
+            margin: auto;
+        }    
+    }
     &-btn {
         position: relative;
         display: flex;
         justify-content: center;
         padding: 35px 0px 25px 0px;
         border-radius: 25px;
-        box-shadow: 6px 6px 28px -1px rgba(0, 0, 0, 0.75);
-        background-color: $color-background-secondary;
+        // box-shadow: 6px 6px 28px -1px rgba(0, 0, 0, 0.75);
+        box-shadow: $box-shadow-card-choice;
+        background-color: $color-background-two;
         font-weight: 500;
         &:hover {
             &::before {
@@ -206,7 +183,7 @@
             padding: 5px 8px 3px 8px;
             border-radius: 50px;
             background-color: $color-primary;
-            color: white;
+            color: $color-wite;
             left: -8px;
             top: 33px;
             font-size: 13px;
@@ -221,7 +198,7 @@
         &__text {
             padding: 30px;
             border-radius: 25px;
-            background-color: $color-background-secondary;
+            background-color: $color-background-two;
         }
     }
 }
@@ -234,12 +211,15 @@
 #icon-market {
     width: 20px;
 }
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
+// \\\\\\\\\\    Card    ////////// \\
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
 .card {
     position: relative;
     width: 90%;
     margin: auto auto 20px auto;
     border-radius: 20px;
-    box-shadow: 0px 0px 17px -4px #000000;
+    box-shadow: $box-shadow-card-choice;
     &:hover {
         &::before {
             opacity: 1;

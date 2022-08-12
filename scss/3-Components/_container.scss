@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    &-functioning {
+        margin-bottom: 65px;
+    }
+    &-restaurants {
+        background-color: $color-background-two;
+
+    }
+    &-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        margin-bottom: 45px;
+        @media all and (min-width: 992px) {
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+    &-menu {
+        position: relative;
+        margin: auto;
+        border-radius: 40px 40px 0 0;
+        background-color: $color-background-two;
+        margin-top: -36px;
+        &__bis {
+            @media all and (min-width: 1100px) {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+    }
+    &-footer {
+        background-color: $color-background-footer;
+    }
+}

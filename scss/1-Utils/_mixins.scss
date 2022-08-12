@@ -1,5 +1,9 @@
-@mixin gradient {
-    background-image: linear-gradient(to bottom, $color-secondary, $color-primary);
+@mixin gradient-btn {
+    background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+    border-radius: 30px;
+    color: $color-wite;
+    box-shadow: 3px 3px 28px 3px rgba(0, 0, 0, 0.30);
+    font-size: 16px;
 }
 @mixin hover-effect {
     content: "";
@@ -9,8 +13,12 @@
     bottom: 0;  
     left: 0;
     border-radius: 25px;
-    box-shadow: 0px 10px 13px -7px #000000, 0px 0px 28px -1px lighten($color-primary, 20);
+    box-shadow: 0px 10px 13px -7px $color-black, 0px 0px 28px -1px lighten($color-primary, 20);
     opacity: 0;
     z-index: -1;
     transition: opacity 250ms;
+}
+@mixin spawn-choice {
+    opacity: 0;
+    animation: choice-number 1s both;
 }

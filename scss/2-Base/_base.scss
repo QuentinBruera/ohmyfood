@@ -1,23 +1,14 @@
-// * {
-//     border: solid 1px black;
-// }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-// body {
-//     @media all and (min-width: 992px) {
-//         width: 60%;
-//         margin: auto;
-//     }
-// }
 .card__img {
     width: 200px;
 }
 a {
     text-decoration: none;
-    color: black;
+    color: $color-black;
 }
 ul {
     list-style-type: none;

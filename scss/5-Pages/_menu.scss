@@ -1,11 +1,7 @@
-// * {
-//     border: solid 1px black;
-// }
-// body {
-//     display: flex;
-//     flex-direction: column;
-// }
-// Section 1
+
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
+// \\\\\\\\\\  Main-img  ////////// \\
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
 .restaurant-image img{
     width: 100%;
     height: auto;
@@ -13,33 +9,20 @@
     object-fit: cover;
 }
 
-// Section 2 
-// contener-menu
-.contener-menu {
-    margin: auto;
-    border-radius: 40px 40px 0 0;
-    background-color: #F6F6F6;
-    margin-top: -36px;
-    position: relative;
-    &__bis {
-        @media all and (min-width: 1100px) {
-            display: flex;
-            justify-content: space-around;
-        }
-    }
-}
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
+// \\\\\\\\\\    Menu    ////////// \\
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
 
 .menu {
     display: flex;
     flex-direction: column;
     &-title {
         display: flex;
+        margin: auto;
         width: 350px;
         justify-content: space-between;
         align-items: center;
-        // padding: 35px 38px 0 20px;
         padding: 35px 25px 0 8px;
-        margin: auto;
         & h1 {
             font-size: 28px ;
             font-family: 'Shrikhand', cursive;
@@ -63,121 +46,45 @@
     &__btn {
         padding: 38px 0 75px 0;
         &__a {
+            @include gradient-btn;
             display: flex;
             margin: auto;
             justify-content: center;
             align-items: center;
             width: 190px;
             height: 50px;
-            background-color: red;
-            background-image: linear-gradient(to top left, $color-primary, $color-secondary);
             padding: 0 20px 0 20px;
         }
     }
 }
-.btn {
-    width: 300px;
-    margin: auto;    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.menu-heart {
-    position: relative;
-}
-.heart {
-    width: 25px;
-    transform-origin: top;
-    cursor: pointer;
-}
-.heart--anim {
-    width: 25px;
-    left: 0;
-    transform-origin: bottom;
-    position: absolute;
-    transform: scale(0);
-    fill: url(#grad3);
-    cursor: pointer;
-    &:hover {
-        transform: scale(1.01);
-        transition: transform .4s;
-    }
-}
-.heart:hover + .heart--anim {
-    transform: scale(1.01);
-    transition: transform .4s;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.menu__choice {
-    position: relative;
-}
-
-
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
+// \\\\\\\\\\   Choice   ////////// \\
+// \\\\\\\\\\ !!!!!!!!!! ////////// \\
 .choice {
     display: flex;
     position: relative;
     margin: auto auto 14px auto;
     width: 350px;
     overflow: hidden;
-    background-color: white;
+    background-color: $color-wite;
     border-radius: 15px;
     cursor: pointer;
-    box-shadow: 0px 0px 17px -4px #000000;
+    box-shadow: $box-shadow-card-choice;
+    &__menu {
+        position: relative;
+    }
     &-1 {
-        opacity: 0;
-        animation: choice-number 1s both;
+        @include spawn-choice;
     }
     &-2 {
-        opacity: 0;
-        animation: choice-number 1s both;
-        animation-delay: 0.3s;
+        @include spawn-choice;
+        animation-delay: $animation-delay;
     }
     &-3 {
-        opacity: 0;
-        animation: choice-number 1s both;
-        animation-delay: 0.6s;
+        @include spawn-choice;
+        animation-delay: $animation-delay*2;
     }
-    &__contener-text-price {
+    &__container-text-price {
         position: relative;
         display: flex;
     }
@@ -218,7 +125,7 @@
         margin: 0;
         width: 60px;
         height: 100%;
-        fill: white;
+        fill: $color-wite;
         background-color: $color-tertiary;
     }
     &:hover .choice__valid {
@@ -248,7 +155,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-    
 }
 @keyframes valid {
     0% {
@@ -258,4 +164,3 @@
         transform: translateX(15px);
     }
 }
-
