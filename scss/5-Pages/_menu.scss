@@ -84,6 +84,10 @@
         @include spawn-choice;
         animation-delay: $animation-delay*2;
     }
+    &-4  {
+        @include spawn-choice;
+        animation-delay: $animation-delay*3;
+    }
     &__container-text-price {
         position: relative;
         display: flex;
@@ -99,7 +103,6 @@
     }
     &:hover .choice__title {
         width: 275px;
-        transition: 1s;
     }
     &__text {
         position: relative;
