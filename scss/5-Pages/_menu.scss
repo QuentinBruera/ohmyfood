@@ -1,3 +1,5 @@
+@use "../1-Utils/variables" as v;
+@use "../1-Utils/mixins" as m;
 
 // \\\\\\\\\\ !!!!!!!!!! ////////// \\
 // \\\\\\\\\\  Main-img  ////////// \\
@@ -39,14 +41,14 @@
             display: block;
             width: 40px;
             height: 3px;
-            background-color: $color-tertiary;
+            background-color: v.$color-tertiary;
             margin-top: 3px;
         }
     }
     &__btn {
         padding: 38px 0 75px 0;
         &__a {
-            @include gradient-btn;
+            @include m.gradient-btn;
             display: flex;
             margin: auto;
             justify-content: center;
@@ -66,27 +68,27 @@
     margin: auto auto 14px auto;
     width: 350px;
     overflow: hidden;
-    background-color: $color-wite;
+    background-color: v.$color-wite;
     border-radius: 15px;
     cursor: pointer;
-    box-shadow: $box-shadow-card-choice;
+    box-shadow: v.$box-shadow-card-choice;
     &__menu {
         position: relative;
     }
     &-1 {
-        @include spawn-choice;
+        @include m.spawn-choice;
     }
     &-2 {
-        @include spawn-choice;
-        animation-delay: $animation-delay;
+        @include m.spawn-choice;
+        animation-delay: v.$animation-delay;
     }
     &-3 {
-        @include spawn-choice;
-        animation-delay: $animation-delay*2;
+        @include m.spawn-choice;
+        animation-delay: v.$animation-delay*2;
     }
     &-4  {
-        @include spawn-choice;
-        animation-delay: $animation-delay*3;
+        @include m.spawn-choice;
+        animation-delay: v.$animation-delay*3;
     }
     &__container-text-price {
         position: relative;
@@ -95,14 +97,18 @@
     &__title {
         position: relative;
         margin: 0;
+        width: 305px;
         padding: 13px 0 6px 10px;
         font-size: 18px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        transition: all 1s;
     }
     &:hover .choice__title {
+        margin-right: 10px;
         width: 275px;
+        transition: 1s;
     }
     &__text {
         position: relative;
@@ -113,9 +119,11 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        transition: all 1s;
     }
     &:hover .choice__text {
-        width: 230px;
+        margin-right: 10px;
+        width: 235px;
         transition: 1s;
     }
     &__price {
@@ -128,22 +136,11 @@
         margin: 0;
         width: 60px;
         height: 100%;
-        fill: $color-wite;
-        background-color: $color-tertiary;
-    }
-    &:hover .choice__valid {
-        transform: rotate(180deg);
-        transition: transform 3s;
-    }
-    &:hover .choice__move {
-        animation: valid 1s;
-        animation-fill-mode: both;
+        fill: v.$color-wite;
+        background-color: v.$color-tertiary;
     }
     &:hover .card-icon {
-        width: 30px;
-        margin: auto;
         transform: rotate(1turn);
-        transition: transform 1s;
     }
 }
 @keyframes choice-number {
@@ -157,13 +154,5 @@
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-@keyframes valid {
-    0% {
-        transform: translateX(0px);
-    }
-    100% {
-        transform: translateX(15px);
     }
 }

@@ -1,16 +1,19 @@
 // \\\\\\\\\\ !!!!!!!!!! ////////// \\
 // \\\\\\\\\\   Loader   ////////// \\
 // \\\\\\\\\\ !!!!!!!!!! ////////// \\
+@use "../1-Utils/variables" as v;
+@use "../1-Utils/mixins" as m;
+
 .loader {
+    z-index: 999;
+    animation: loader 3s both steps(1);
     position: fixed;
     display: flex;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($color: $color-black, $alpha: 0.8);
-    z-index: 999;
-    animation: loader 3s both steps(1);
+    background: rgba($color: v.$color-black, $alpha: 0.8);
     &__spinner {
         position: relative;
         margin: auto;
@@ -18,8 +21,8 @@
         height: 50px;
         border-radius: 50px;
         border: 6px solid transparent;
-        border-top-color: $color-primary;
-        border-bottom-color: $color-primary;
+        border-top-color: v.$color-primary;
+        border-bottom-color: v.$color-primary;
         animation: spin 3s linear infinite;
         opacity: 0.9;
         &::before {
@@ -30,7 +33,7 @@
             bottom: 15px;
             left: 15px;
             border-radius: 50px;
-            border: 4px solid $color-secondary;
+            border: 4px solid v.$color-secondary;
             opacity: 0.5;
             }
         &::after {
@@ -42,8 +45,8 @@
             left: 5px;
             border-radius: 50px;
             border: 5px solid transparent;
-            border-right-color: $color-tertiary;
-            border-left-color: $color-tertiary;
+            border-right-color: v.$color-tertiary;
+            border-left-color: v.$color-tertiary;
             animation: spinreverse 2s linear infinite;
             opacity: 1;
         }
@@ -82,8 +85,8 @@
     display: flex;
     justify-content: center;
     padding: 15px 0 15px 0;
-    box-shadow: 0px 0px 10px -2px lighten($color-black, 20);
-    background-color: $color-background-one;
+    box-shadow: 0px 0px 10px -2px lighten(v.$color-black, 20);
+    background-color: v.$color-background-one;
 
     &__icon {
         position: absolute;
@@ -101,7 +104,7 @@
 // \\\\\\\\\\   Title    ////////// \\
 // \\\\\\\\\\ !!!!!!!!!! ////////// \\
 .title {
-    background-color: $color-background-two;
+    background-color: v.$color-background-two;
     &__h1 {
         width: 65%;
         margin: auto;
@@ -121,7 +124,7 @@
         text-align: center;
         font-weight: 500;
         &__a {
-            @include gradient-btn;
+            @include m.gradient-btn;
             padding: 15px 21px 15px 21px;
             &:hover {
                 opacity: 0.8;
@@ -155,8 +158,8 @@
         padding: 35px 0px 25px 0px;
         border-radius: 25px;
         // box-shadow: 6px 6px 28px -1px rgba(0, 0, 0, 0.75);
-        box-shadow: $box-shadow-card-choice;
-        background-color: $color-background-two;
+        box-shadow: v.$box-shadow-card-choice;
+        background-color: v.$color-background-two;
         font-weight: 500;
         &:hover {
             &::before {
@@ -172,8 +175,8 @@
             bottom: 0;  
             left: 0;
             border-radius: 25px;
-            background-color: lighten($color-primary, 35);
-            box-shadow: 0px 10px 13px -7px #000000, 0px 0px 28px -1px lighten($color-primary, 20);
+            background-color: lighten(v.$color-primary, 35);
+            box-shadow: 0px 10px 13px -7px #000000, 0px 0px 28px -1px lighten(v.$color-primary, 20);
             opacity: 0;
             z-index: -1;
             transition: opacity 250ms;
@@ -182,8 +185,8 @@
             position: absolute;
             padding: 5px 8px 3px 8px;
             border-radius: 50px;
-            background-color: $color-primary;
-            color: $color-wite;
+            background-color: v.$color-primary;
+            color: v.$color-wite;
             left: -8px;
             top: 33px;
             font-size: 13px;
@@ -198,7 +201,7 @@
         &__text {
             padding: 30px;
             border-radius: 25px;
-            background-color: $color-background-two;
+            background-color: v.$color-background-two;
         }
     }
 }
@@ -219,7 +222,7 @@
     width: 90%;
     margin: auto auto 20px auto;
     border-radius: 20px;
-    box-shadow: $box-shadow-card-choice;
+    box-shadow: v.$box-shadow-card-choice;
     &:hover {
         &::before {
             opacity: 1;
@@ -227,20 +230,20 @@
         }
     }
     &::before {
-        @include hover-effect;
-        background-color: lighten($color-primary, 35);
+        @include m.hover-effect;
+        background-color: lighten(v.$color-primary, 35);
     }
     &__new {
         position: absolute;
         right: 14px;
         top: 13px;
         padding: 7px 14px 5px 13px;
-        background-color: $color-tertiary;
+        background-color: v.$color-tertiary;
         font-size: 13.5px;
         font-weight: 600;
         & p{
             margin: 0;
-            color: darken($color-tertiary,35);
+            color: darken(v.$color-tertiary,35);
         }
     }
     &__img {

@@ -16,7 +16,7 @@
         justify-content: space-around;
     }
     &__logo {
-        color: $color-background-one;
+        color: v.$color-background-one;
     }
     &__list {
         margin: 0;
@@ -37,9 +37,9 @@
         }
         & li a{
             padding-bottom: 8px;
-            color: $color-wite;
+            color: v.$color-wite;
             &:hover {
-                text-decoration: underline $color-wite;
+                text-decoration: underline v.$color-wite;
             }
             @media all and (min-width: 768px) {
                 padding: 0;
@@ -50,11 +50,11 @@
         }
         &__icon {
             width: 23px;
-            fill: $color-background-one;
+            fill: v.$color-background-one;
             padding-right: 10px;
         }
         &__text {
-            color: $color-background-one;
+            color: v.$color-background-one;
         }
     }
 }

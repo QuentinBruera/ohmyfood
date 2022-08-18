@@ -130,6 +130,12 @@ h4 {
   fill-opacity: 0.7;
 }
 
+.card-icon {
+  width: 30px;
+  margin: auto;
+  transition: transform 1s;
+}
+
 .header {
   display: flex;
   position: relative;
@@ -210,6 +216,9 @@ h4 {
 }
 
 .loader {
+  z-index: 999;
+  -webkit-animation: loader 3s both steps(1);
+          animation: loader 3s both steps(1);
   position: fixed;
   display: flex;
   top: 0;
@@ -217,9 +226,6 @@ h4 {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 999;
-  -webkit-animation: loader 3s both steps(1);
-          animation: loader 3s both steps(1);
 }
 .loader__spinner {
   position: relative;
@@ -616,14 +622,18 @@ h4 {
 .choice__title {
   position: relative;
   margin: 0;
+  width: 305px;
   padding: 13px 0 6px 10px;
   font-size: 18px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: all 1s;
 }
 .choice:hover .choice__title {
+  margin-right: 10px;
   width: 275px;
+  transition: 1s;
 }
 .choice__text {
   position: relative;
@@ -634,9 +644,11 @@ h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: all 1s;
 }
 .choice:hover .choice__text {
-  width: 230px;
+  margin-right: 10px;
+  width: 235px;
   transition: 1s;
 }
 .choice__price {
@@ -652,21 +664,8 @@ h4 {
   fill: #fff;
   background-color: #99E2D0;
 }
-.choice:hover .choice__valid {
-  transform: rotate(180deg);
-  transition: transform 3s;
-}
-.choice:hover .choice__move {
-  -webkit-animation: valid 1s;
-          animation: valid 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
 .choice:hover .card-icon {
-  width: 30px;
-  margin: auto;
   transform: rotate(1turn);
-  transition: transform 1s;
 }
 
 @-webkit-keyframes choice-number {
@@ -694,21 +693,5 @@ h4 {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes valid {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(15px);
-  }
-}
-@keyframes valid {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(15px);
   }
 }/*# sourceMappingURL=style.css.map */

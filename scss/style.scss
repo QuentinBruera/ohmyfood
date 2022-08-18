@@ -1,15 +1,28 @@
-@import "1-Utils/variables";
-@import "1-Utils/mixins";
+@use './2-Base/base';
+@use './2-Base/typography';
 
-@import "2-Base/base";
-@import "2-Base/typography";
+@use './3-Components/container';
+@use './3-Components/heart';
+@use './3-Components/icons';
 
-@import "3-Components/container";
-@import "3-Components/heart";
-@import "3-Components/icons";
+@use './4-Layout/header';
+@use './4-Layout/footer';
 
-@import "4-Layout/header";
-@import "4-Layout/footer";
+@use './5-Pages/index';
+@use './5-Pages/menu';
 
-@import "5-Pages/index";
-@import "5-Pages/menu";
+// @import "1-Utils/variables";
+// @import "1-Utils/mixins";
+
+// @import "2-Base/base";
+// @import "2-Base/typography";
+
+// @import "3-Components/container";
+// @import "3-Components/heart";
+// @import "3-Components/icons";
+
+// @import "4-Layout/header";
+// @import "4-Layout/footer";
+
+// @import "5-Pages/index";
+// @import "5-Pages/menu";
