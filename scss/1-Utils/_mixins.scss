@@ -15,7 +15,7 @@
     bottom: 0;  
     left: 0;
     border-radius: 25px;
-    box-shadow: 0px 10px 13px -7px v.$color-black, 0px 0px 28px -1px lighten(v.$color-primary, 20);
+    box-shadow: 0px 10px 13px -7px lighten($color: v.$color-black, $amount: 50), 0px 0px 28px -1px lighten(v.$color-primary, 20);
     opacity: 0;
     z-index: -1;
     transition: opacity 250ms;

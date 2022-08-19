@@ -149,7 +149,7 @@
             gap: 20px;
             width: 90%;
             margin: auto;
-        }    
+        }
     }
     &-btn {
         position: relative;
@@ -157,7 +157,6 @@
         justify-content: center;
         padding: 35px 0px 25px 0px;
         border-radius: 25px;
-        // box-shadow: 6px 6px 28px -1px rgba(0, 0, 0, 0.75);
         box-shadow: v.$box-shadow-card-choice;
         background-color: v.$color-background-two;
         font-weight: 500;
@@ -176,7 +175,7 @@
             left: 0;
             border-radius: 25px;
             background-color: lighten(v.$color-primary, 35);
-            box-shadow: 0px 10px 13px -7px #000000, 0px 0px 28px -1px lighten(v.$color-primary, 20);
+            box-shadow: 0px 10px 13px -7px lighten($color: v.$color-black, $amount: 50), 0px 0px 28px -1px lighten(v.$color-primary, 20);
             opacity: 0;
             z-index: -1;
             transition: opacity 250ms;
@@ -196,7 +195,14 @@
         }
         &__icon {
             position: absolute;
-                left: -38px;
+            left: -38px;
+            &--hover {
+                fill: v.$color-primary;
+                opacity: 0;            
+            }
+        }
+        &:hover .tutorial-btn__icon--hover{
+            opacity: 1;
         }
         &__text {
             padding: 30px;
@@ -204,15 +210,6 @@
             background-color: v.$color-background-two;
         }
     }
-}
-#icon-phone {
-    width: 15px;
-}
-#icon-menu {
-    width: 17px;
-}
-#icon-market {
-    width: 20px;
 }
 // \\\\\\\\\\ !!!!!!!!!! ////////// \\
 // \\\\\\\\\\    Card    ////////// \\

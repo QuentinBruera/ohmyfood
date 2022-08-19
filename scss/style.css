@@ -122,6 +122,18 @@ h4 {
   transition: transform 0.4s;
 }
 
+.icon-phone {
+  width: 15px;
+}
+
+.icon-menu {
+  width: 17px;
+}
+
+.icon-market {
+  width: 20px;
+}
+
 .arrow {
   position: absolute;
   width: 18px;
@@ -411,7 +423,7 @@ h4 {
   left: 0;
   border-radius: 25px;
   background-color: #f2eafb;
-  box-shadow: 0px 10px 13px -7px #000000, 0px 0px 28px -1px #c9abee;
+  box-shadow: 0px 10px 13px -7px gray, 0px 0px 28px -1px #c9abee;
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
@@ -433,22 +445,17 @@ h4 {
   position: absolute;
   left: -38px;
 }
+.tutorial-btn__icon--hover {
+  fill: #9356DC;
+  opacity: 0;
+}
+.tutorial-btn:hover .tutorial-btn__icon--hover {
+  opacity: 1;
+}
 .tutorial-btn__text {
   padding: 30px;
   border-radius: 25px;
   background-color: #F6F6F6;
-}
-
-#icon-phone {
-  width: 15px;
-}
-
-#icon-menu {
-  width: 17px;
-}
-
-#icon-market {
-  width: 20px;
 }
 
 .card {
@@ -470,7 +477,7 @@ h4 {
   bottom: 0;
   left: 0;
   border-radius: 25px;
-  box-shadow: 0px 10px 13px -7px #000, 0px 0px 28px -1px #c9abee;
+  box-shadow: 0px 10px 13px -7px gray, 0px 0px 28px -1px #c9abee;
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
