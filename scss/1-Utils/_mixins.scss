@@ -18,7 +18,7 @@
     box-shadow: 0px 10px 13px -7px lighten($color: v.$color-black, $amount: 50), 0px 0px 28px -1px lighten(v.$color-primary, 20);
     opacity: 0;
     z-index: -1;
-    transition: opacity 250ms;
+    transition: all 250ms;
 }
 @mixin spawn-choice {
     opacity: 0;

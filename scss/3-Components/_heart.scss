@@ -2,21 +2,20 @@
     position: relative;
 }
 .heart {
+    position: absolute;
     width: 25px;
     transform-origin: top;
     cursor: pointer;
 }
 .heart--anim {
     width: 25px;
-    left: 0;
     transform-origin: bottom;
-    position: absolute;
     transform: scale(0);
     fill: url(#grad);
+    transition: transform .4s;
     cursor: pointer;
     &:hover {
         transform: scale(1.01);
-        transition: transform .4s;
     }
 }
 .heart:hover + .heart--anim {

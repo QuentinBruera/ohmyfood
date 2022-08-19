@@ -155,7 +155,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-        padding: 35px 0px 25px 0px;
+        padding: 25px 0px 25px 25px;
         border-radius: 25px;
         box-shadow: v.$box-shadow-card-choice;
         background-color: v.$color-background-two;
@@ -167,19 +167,9 @@
             }
         }
         &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;  
-            left: 0;
-            border-radius: 25px;
+            @include m.hover-effect;
             background-color: lighten(v.$color-primary, 35);
-            box-shadow: 0px 10px 13px -7px lighten($color: v.$color-black, $amount: 50), 0px 0px 28px -1px lighten(v.$color-primary, 20);
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
-        }
+            }
         &__number {
             position: absolute;
             padding: 5px 8px 3px 8px;
@@ -187,7 +177,6 @@
             background-color: v.$color-primary;
             color: v.$color-wite;
             left: -8px;
-            top: 33px;
             font-size: 13px;
         }
         &__txt {

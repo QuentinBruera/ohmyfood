@@ -98,6 +98,7 @@ h4 {
 }
 
 .heart {
+  position: absolute;
   width: 25px;
   transform-origin: top;
   cursor: pointer;
@@ -105,16 +106,14 @@ h4 {
 
 .heart--anim {
   width: 25px;
-  left: 0;
   transform-origin: bottom;
-  position: absolute;
   transform: scale(0);
   fill: url(#grad);
+  transition: transform 0.4s;
   cursor: pointer;
 }
 .heart--anim:hover {
   transform: scale(1.01);
-  transition: transform 0.4s;
 }
 
 .heart:hover + .heart--anim {
@@ -404,7 +403,7 @@ h4 {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 35px 0px 25px 0px;
+  padding: 25px 0px 25px 25px;
   border-radius: 25px;
   box-shadow: 0px 0px 17px -4px #000;
   background-color: #F6F6F6;
@@ -422,11 +421,11 @@ h4 {
   bottom: 0;
   left: 0;
   border-radius: 25px;
-  background-color: #f2eafb;
   box-shadow: 0px 10px 13px -7px gray, 0px 0px 28px -1px #c9abee;
   opacity: 0;
   z-index: -1;
-  transition: opacity 250ms;
+  transition: all 250ms;
+  background-color: #f2eafb;
 }
 .tutorial-btn__number {
   position: absolute;
@@ -435,7 +434,6 @@ h4 {
   background-color: #9356DC;
   color: #fff;
   left: -8px;
-  top: 33px;
   font-size: 13px;
 }
 .tutorial-btn__txt {
@@ -480,7 +478,7 @@ h4 {
   box-shadow: 0px 10px 13px -7px gray, 0px 0px 28px -1px #c9abee;
   opacity: 0;
   z-index: -1;
-  transition: opacity 250ms;
+  transition: all 250ms;
   background-color: #f2eafb;
 }
 .card__new {
